@@ -1,0 +1,43 @@
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Disclaimer</div>
+      </div>
+    </div>
+    <div class="page-content">
+
+  <div class="block">
+
+    This App is not Facebook official Application. This app will not save any informations for the user.
+
+  </div>
+
+
+
+    </div>
+  </div>
+</template>
+<script>
+//http://d3pie.org/#
+  return {
+    data: function() {
+      return {}
+    },
+    on: {
+      // each object key means same name event handler
+      pageInit: function(page) {
+      //  userReadStatisticsInit(page)
+      },
+      popupOpen: function(popup) {
+        // do something on popup open
+      },
+    },
+  }
+</script>
