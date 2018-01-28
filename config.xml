@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget android-versionCode="1" id="com.skyexplorer.whatsAdd" version="0.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>WhatsAdd</name>
+    <name>WhatsApp With No Contacts List</name>
     <description>
-      WhatsAdd
+      WhatsApp With No Contacts List
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
        Sky Explorer
