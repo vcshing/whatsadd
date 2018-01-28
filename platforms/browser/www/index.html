@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Luck</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+  <link rel="stylesheet" href="lib/framework7/css/framework7.material.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/csshake.min.css">
+
+<script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+    <script type="text/javascript" src="commonjs/library/jquery.js"></script>
+  <!--  <script type="text/javascript" src="commonjs/library/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/moment.js"></script>-->
+    <script type="text/javascript" src="commonjs/library/local_storage_manager.js"></script>
+    <script language="javascript" src="commonjs/library/GB2312TOBIG5.js"></script>
+    <script language="javascript" src="commonjs/library/GBCodeUnicode.js"></script>
+    <script language="javascript" src="commonjs/library/GB2312TOBIGGB.js"></script>
+    <script language="javascript" src="commonjs/library/BIG5TOGB2312.js"></script>
+    <script language="javascript" src="commonjs/library/BIGCodeUnicode.js"></script>
+    <script language="javascript" src="commonjs/library/BIG5TOGBBIG.js"></script>
+    <style></style>
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="button indexpage">主頁</div>
+        <div class="button ranking">排行榜</div>
+        <div class="button dailyCheckin">每日簽到</div>
+        <div class="button rechargeMoney">充值</div>
+
+          <div class=" button ">
+             &nbsp;
+          </div>  <div class=" button ">
+               &nbsp;
+            </div>  <div class=" button ">
+                 &nbsp;
+              </div>
+        <div class="button otherApp wordOtherApps">
+          其他應用
+        </div>
+        <div class="button shareApp">
+            分享應用
+        </div>
+        <div class=" button ">
+           &nbsp;
+        </div>
+        <div class="menuBack button ">
+          ~  返回  ~
+        </div>
+        <div class=" button ">
+           &nbsp;
+        </div>
+        <div class=" button ">
+           &nbsp;
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+
+                  <div class="subnavbar">
+      <!-- Sub navbar content, for example tabs buttons -->
+      <div class="buttons-row">
+          <a href="#tab1" class="button active">Tab 1</a>
+          <a href="#tab2" class="button">Tab 2</a>
+          <a href="#tab3" class="button">Tab 3</a>
+      </div>
+  </div>
+
+<div class="left">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="button">現金:<span class="onhandAmtSign">$</span><span class="onhandAmt">50000</span></div>
+</div>
+                    <div class="right">
+                      <p class="buttons-row">
+
+
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+
+
+                            <i class="icon icon-bars navMenu"></i>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+
+                    <div class="page-content">
+                      <br/>
+                        <div class="row no-gutter">
+                            <div class="col-auto"></div>
+                            <div class="col-auto" style="height:30%"><img class="result1" src="./image/fish.png" style="width:100%"></div>
+                            <div class="col-auto  " style="height:30%"><img class="result2" src="./image/shrimp.png" style="width:100%"></div>
+                            <div class="col-auto  " style="height:30%"><img class="result3" src="./image/crab.png" style="width:100%"></div>
+                            <div class="col-auto"></div>
+                        </div>
+
+
+                        <br/>
+
+                        <div class="row  ">
+                            <div class="col-auto button betA " style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betAAmtSign"></span>
+                                <span class="betAAmt"></span>
+                              </div>
+                              <img class="shake-slow betAImage"  src="./image/fish.png" style="width:100%">
+                            </div>
+                            <div class="col-auto button betB" style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betBAmtSign"></span>
+                                <span class="betBAmt"></span>
+                              </div>
+                              <img class="shake-slow betBImage"  src="./image/shrimp.png" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="row  ">
+                            <div class="col-auto  button betC" style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betCAmtSign"></span>
+                                <span class="betCAmt"></span>
+                              </div>
+                                <img class="shake-slow betCImage"  src="./image/crab.png" style="width:100%" />
+                            </div>
+                            <div class="col-auto button betD" style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betDAmtSign"></span>
+                                <span class="betDAmt"></span>
+                              </div>
+                                <img class="shake-slow betDImage"  src="./image/money.png" style="width:100%" />
+                            </div>
+                        </div>
+
+                        <div class="row  ">
+                            <div class="col-auto button betE" style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betEAmtSign"></span>
+                                <span class="betEAmt"></span>
+                              </div>
+                                <img class="shake-slow betEImage" src="./image/wo.png" style="width:100%"></div>
+                            <div class="col-auto button betF" style="height:90%">
+                              <div style="position:absolute">
+                                <span class="betFAmtSign"></span>
+                                <span class="betFAmt"></span>
+                              </div>
+                                <img class="shake-slow betFImage" src="./image/chicken.png" style="width:100%">
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="buttons-row">
+                            <a href="#" class="button button-raised button-fill betAmt50">$50</a>
+                            <a href="#" class="button button-raised betAmt100">$100</a>
+                            <a href="#" class="button button-raised betAmt500">$500</a>
+                            <a href="#" class="button button-raised betAmt1000">$1000</a>
+                        </p>
+
+                        <p class="buttons-row">
+                            <a href="#" class="button button-raised button-fill betSubmit">投注</a>
+                        </p>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <script type="text/javascript" src="cordova.js"></script>
+
+            <script type="text/javascript" src="commonjs/global/langArr.js"></script>
+            <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
+            <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
+            <script type="text/javascript" src="commonjs/global/commonFunction.js"></script>
+            <script type="text/javascript" src="commonjs/global/commonBindEvent.js"></script>
+            <script type="text/javascript" src="commonjs/global/commonXhr.js"></script>
+            <script type="text/javascript" src="commonjs/global/my-app.js"></script>
+
+            <script type="text/javascript" src="page/index/init.js"></script>
+            <script type="text/javascript" src="page/index/function.js"></script>
+            <script type="text/javascript" src="page/index/bindEvent.js"></script>
+            <script type="text/javascript" src="page/index/xhr.js"></script>
+
+            <script type="text/javascript" src="page/ranking/js/init.js"></script>
+            <script type="text/javascript" src="page/ranking/js/function.js"></script>
+            <script type="text/javascript" src="page/ranking/js/bindEvent.js"></script>
+            <script type="text/javascript" src="page/ranking/js/xhr.js"></script>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+          <script>
+                $(function() {
+                  //clearCookie("onhandAmt")
+                    onhandAmt = getCookie("onhandAmt", "", 50000);
+                    if(isNaN(parseInt(onhandAmt))){
+                      clearCookie("onhandAmt")
+                      onhandAmt = 3000
+                    }
+                    $(".onhandAmt").html(onhandAmt);
+
+                    //lang = getCookie("lang", "selectedLang", checkLang());
+                    lang = getCookie("lang", "selectedLang", checkLang());
+                    sliceGameResult()
+
+                })
+
+            </script>
+
+</body>
+
+</html>

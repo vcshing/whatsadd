@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="1" id="com.skyexplorer.whatsAdd" version="0.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>WhatsAdd</name>
+    <description>
+      WhatsAdd
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+       Sky Explorer
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="14" />
+        <preference name="android-targetSdkVersion" value="23" />
+        <config-file mode="merge" parent="/manifest" platform="android">
+            <preference name="play_store_key" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsDS017zQjW934Q0CHSfEdjopzjOAyqFXfNXiCuTB7PmEfDVm+AIVpgGb3lwZBiZFCUFibU5t3LR8u77hGqnwtCkdVJSYgJCSb/h6EDS8c0h08oazBJyyUcGmC6ILTr7kFY2v5yDinaac6ZSwuMm3oYCWdRKm/NId2OO33vPMsV3KGm+HR609SLw/inxMYqaDpLE3wx2dBVu+sjhbd2CEKpBsOdXeVzCpv6SVp2FzAKPaMm+34e4JndvN9dKDSgrPHH6mS6P448ZHDXA84UbRcC0FiotKg0cBrqdFTrHfHNNalgN5QLy/q2/JscalR8sOOCb8QqZICz3+//rMOQlszwIDAQAB" />
+        </config-file>
+        <allow-intent href="market:*" />
+        <icon density="ldpi" src="www/res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="www/res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="www/res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="www/res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="www/res/icon/android/xxxhdpi.png" />
+        <feature name="SocialSharing">
+            <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+        </feature>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="BackupWebStorage" value="none" />
+    </platform>
+    <platform name="wp8">
+    </platform>
+    <platform name="windows">
+    </platform>
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
+    <preference name="fullscreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="permissions" value="none" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.3.0" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-vibration" spec="~2.1.2" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="~5.1.6" />
+    <plugin name="cordova-plugin-x-toast" spec="~2.5.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.0" />
+    <plugin name="cordova-plugin-admobpro" spec="^2.29.29" />
+    <plugin name="cordova-plugin-device" spec="^1.1.7" />
+    <plugin name="cordova-plugin-inapppurchase" spec="^1.2.0" />
+    <engine name="browser" spec="~5.0.3" />
+</widget>

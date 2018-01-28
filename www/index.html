@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/app.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+
+    <link rel="stylesheet" href="css/csshake.min.css">
+    <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+    <link rel="icon" href="img/f7-icon.png">
+    <link rel="stylesheet" href="commonjs/library/editor/trumbowyg.css">
+    <link rel="stylesheet" href="commonjs/library/editor/trumbowyg.colors.min.css">
+    <link rel="stylesheet" href="commonjs/library/chartistjs/chartistjs.css">
+
+
+    <body>
+
+        <div id="app">
+            <div class="statusbar"></div>
+            <div class="panel panel-left panel-cover">
+                <div class="page">
+                    <div class="page-content">
+                        <!--  <div class="block-title">Left Panel</div>
+          <div class="block">  </div>
+          <div class="block-title">Main View Navigation</div>-->
+                        <div class="list links-list">
+                            <ul>
+                                <li>
+                                    <a href="/?reload=1" class="panel-close">主頁</a>
+                                </li>
+                                <li>
+                                    <a href="/disclaimer/" class="panel-close">聲明</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="panel-close otherApp">其他應用</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="panel-close shareApp">分享應用</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--  <div class="block">  </div>-->
+                    </div>
+                </div>
+            </div>
+            <!--  <div class="panel panel-right panel-reveal">
+      <div class="view view-init view-right" name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+            <div class="view view-main view-init ios-edges" data-url="/">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="link icon-only panel-open" data-panel="left">
+                                    <i class="icon f7-icons ios-only">menu</i>
+                                    <i class="icon material-icons md-only">menu</i>
+                                </a>
+                            </div>
+                            <div class="title sliding">WhatsApp Message For No Added Contact</div>
+                            <!--    <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>-->
+                            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+                                <div class="searchbar-inner">
+                                    <div class="searchbar-input-wrap">
+                                        <input type="search" placeholder="Search components" />
+                                        <i class="searchbar-icon"></i>
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                    <span class="searchbar-disable-button">Cancel</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="page-content">
+
+                        <div class="list simple-list searchbar-not-found">
+                            <ul>
+                                <li>Nothing found</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="list no-hairlines-md">
+                                <li class="item-content item-input item-input-with-value">
+                                    <div class="item-media">
+                                        <i class="f7-icons">navigation_fill</i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Country Code</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" value="" name="countryCode" placeholder="Your Country Code" required validate pattern="[0-9]*" data-error-message="Only numbers please!">
+                                            <span class="input-clear-button"></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-content item-input item-input-with-value">
+                                    <div class="item-media">
+                                        <i class="f7-icons">phone_round_fill</i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Phone</div>
+                                        <div class="item-input-wrap">
+                                            <input type="tel" name="phone" placeholder="Your phone number" required validate pattern="[0-9]*" data-error-message="Only numbers please!">
+                                            <span class="input-clear-button"></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-content item-input">
+                                  <div class="item-media">
+                                      <i class="f7-icons">chat_fill</i>
+                                  </div>
+                                  <div class="item-inner">
+                                <!--    <div class="item-title item-label">Contents</div>-->
+                                    <div class="item-input-wrap">
+                                      <textarea   style="height:200px;" name="contents"  placeholder="Your Contents (Optional)"></textarea>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <div class="block">
+                                  <div class="row">
+                                  <button class="col button button-outline button-fill sendWhatspp">Send WhatsApp</button>
+                                  </div>
+                                </div>
+                        </div>
+
+                        <!-- <iframe src="http://www.webtech.tw/info.php?tid=%E7%94%A8_CSS_z-index_%E8%A8%AD%E8%A8%88%E5%A4%9A%E5%BC%B5%E5%9C%96%E7%89%87%E9%87%8D%E7%96%8A%E7%9A%84%E6%95%88%E6%9E%9C"></iframe>
+                        --></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="commonjs/library/jquery.js"></script>
+        <script type="text/javascript" src="commonjs/library/googlechartjs/Chart.js"></script>
+        <script type="text/javascript" src="commonjs/library/chartistjs/chartistjs.js"></script>
+        <script type="text/javascript" src="commonjs/library/d3pie/d3.min.js"></script>
+        <script type="text/javascript" src="commonjs/library/d3pie/chart.js"></script>
+        <script type="text/javascript" src="commonjs/library/editor/trumbowyg.js"></script>
+        <script type="text/javascript" src="commonjs/library/editor/trumbowyg.allowtagsfrompaste.js"></script>
+        <script type="text/javascript" src="commonjs/library/editor/trumbowyg.colors.min.js"></script>
+
+
+        <!--  <script type="text/javascript" src="commonjs/library/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/moment.js"></script>-->
+        <script type="text/javascript" src="commonjs/library/local_storage_manager.js"></script>
+        <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+        <script type="text/javascript" src="commonjs/global/langArr.js"></script>
+        <script type="text/javascript" src="commonjs/routes/routes.js"></script>
+
+        <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
+        <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
+        <script type="text/javascript" src="commonjs/routes/app.js"></script>
+
+        <script type="text/javascript" src="page/index/init.js"></script>
+        <script type="text/javascript" src="page/index/function.js"></script>
+        <script type="text/javascript" src="page/index/bindEvent.js"></script>
+        <script type="text/javascript" src="page/index/xhr.js"></script>
+
+
+
+</head>
+<script>
+    $(function() {
+    init()
+    })
+</script>
+</body>
+
+</html>
